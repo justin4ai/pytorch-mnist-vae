@@ -2,7 +2,13 @@
 
 This is a repository for well-explained VAE template code for MNIST generation in Pytorch.
 
-Corresponding Velog post has not been published yet, so please be waiting for it!
+Corresponding Velog post : [VAE(Variational AutoEncoder)의 원리 · 설명 with MNIST Pytorch](https://velog.io/@hewas1230/vae-principle)
+
+## TO-DO
+
+- Simple VAE template (done)
+- VAE-GAN template (working on it)
+- cVAE template
 
 ## Environment
 

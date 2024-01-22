@@ -157,7 +157,7 @@ class VAE(nn.Module):
         z = self.decode(z)
         return z, mu, logvar
 
-model = torch.load('./checkpoint/mnist_vae_bce_2.pth') # saved model path
+model = torch.load('./checkpoint/500epochs_KLD*30.pth') # saved model path
                                                        # note : model architecture is saved as well, so p
                                                        # you need VAE() class in this file (or you can make it as a module with separation)
 
@@ -187,6 +187,6 @@ with torch.no_grad():
     save_recon_path = './recon'
     os.makedirs(save_recon_path, exist_ok=True)
 
-    save_image(ground_truth_images.view(BATCH_SIZE, 1, 28, 28), './ground_truth/dd' + '.png')
-    save_image(generated_images.view(BATCH_SIZE, 1, 28, 28), './generated/dd' + '.png')
-    save_image(recon_images.view(BATCH_SIZE, 1, 28, 28), './recon/dd' + '.png')
+    save_image(ground_truth_images.view(BATCH_SIZE, 1, 28, 28), './ground_truth/500epochs_KLD*30' + '.png')
+    save_image(generated_images.view(BATCH_SIZE, 1, 28, 28), './generated/500epochs_KLD*30' + '.png')
+    save_image(recon_images.view(BATCH_SIZE, 1, 28, 28), './recon/500epochs_KLD*30' + '.png')

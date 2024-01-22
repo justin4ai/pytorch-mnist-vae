@@ -158,7 +158,7 @@ def loss_fn(recon_x, x, mu, logvar):
                            # use MSELoss since you cannot use BCELoss
 
     KLD = -0.5 * torch.sum(1 + logvar - mu.pow(2) - logvar.exp())
-    return BCE + 30 * KLD, BCE, 30 * KLD
+    return BCE + KLD, BCE, KLD
 
 
 from tqdm import tqdm
